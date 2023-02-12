@@ -1,0 +1,27 @@
+float hourMinuteCalculations(string a)
+{
+	//a = 50.1200;
+	a = a.toDecimal();
+	//info a;
+	decimalPlaces = a.frac().toString().getSuffix(".").len();
+	//info decimalPlaces;
+	divident = (1 + leftpad("",decimalPlaces).replaceall(" ","0")).toLong();
+	//info divident;
+	b = a.floor();
+	// 	info b;
+	c = a.frac();
+	//info c;
+	d = c * divident / 60;
+	//	info d;
+	e = d.floor();
+	// 	info e;
+	f = d.frac();
+	// 	info f;
+	g = (f * 60 / 100).round(2);
+	// 	info g;
+	b = b + e;
+	// 	info b;
+	b = b + g;
+	// 	info b;
+	return b;
+}
